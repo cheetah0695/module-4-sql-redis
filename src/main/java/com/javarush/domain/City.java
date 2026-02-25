@@ -21,7 +21,7 @@ public class City {
 
     @ManyToOne
     @JoinColumn(name = "country_id")
-    private Country countryId;
+    private Country country;
 
     @Column(name = "district")
     private String district;
@@ -45,12 +45,12 @@ public class City {
         this.name = name;
     }
 
-    public Country getCountryId() {
-        return countryId;
+    public Country getCountry() {
+        return country;
     }
 
-    public void setCountryId(Country countryId) {
-        this.countryId = countryId;
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
     public String getDistrict() {

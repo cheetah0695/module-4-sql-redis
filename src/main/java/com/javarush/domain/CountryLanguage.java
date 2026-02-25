@@ -19,9 +19,6 @@ public class CountryLanguage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "name")
-    private String name;
-
     @ManyToOne
     @JoinColumn(name = "country_id")
     private Country country;
@@ -42,14 +39,6 @@ public class CountryLanguage {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Country getCountry() {

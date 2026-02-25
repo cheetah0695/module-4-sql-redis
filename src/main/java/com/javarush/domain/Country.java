@@ -27,7 +27,7 @@ public class Country {
     private String code;
 
     @Column(name = "code_2")
-    private String code2;
+    private String alternativeCountryCode;
 
     @Column(name = "name")
     private String name;
@@ -90,12 +90,12 @@ public class Country {
         this.code = code;
     }
 
-    public String getCode2() {
-        return code2;
+    public String getAlternativeCountryCode() {
+        return alternativeCountryCode;
     }
 
-    public void setCode2(String code2) {
-        this.code2 = code2;
+    public void setAlternativeCountryCode(String alternativeCountryCode) {
+        this.alternativeCountryCode = alternativeCountryCode;
     }
 
     public String getName() {
