@@ -3,14 +3,13 @@ package com.javarush.util;
 import com.javarush.domain.City;
 import com.javarush.domain.Country;
 import com.javarush.domain.CountryLanguage;
-import io.lettuce.core.RedisClient;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 
 import java.util.Properties;
 
-public class Util {
+public class SqlSessionFactoryBuilder {
     private static final SessionFactory sqlSessionFactory;
 
     static {
@@ -34,10 +33,6 @@ public class Util {
                 .addAnnotatedClass(CountryLanguage.class)
                 .addProperties(properties)
                 .buildSessionFactory();
-    }
-
-    public RedisClient prepareRedisClient() {
-        return null;
     }
 
     public static SessionFactory getSqlSessionFactory() {
